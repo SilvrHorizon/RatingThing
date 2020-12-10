@@ -4,7 +4,9 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon -w ./dist dist/index.js"
+    "start": "nodemon -w ./dist dist/index.js",
+    "startjs": "nodemon -w ./src src/index.ts",
+    "orm": "npx ts-node node_modules\\typeorm\\cli.js -c ts"
   },
   "keywords": [],
   "author": "",

@@ -3,12 +3,16 @@
 import express from "express";
 import { ApolloServer } from 'apollo-server-express'
 import { buildSchema, Query, Resolver } from "type-graphql";
-import { Console } from "console";
 import { createConnection } from "typeorm";
+import { User } from "./entities/user.entity";
 
 const main = async () => {
 
-    await createConnection()
+    const conn = await createConnection();
+    await conn.runMigrations();
+
+
+    console.log(await User.find());
 
     const schema = await buildSchema({
         resolvers: [__dirname + "/**/*.resolver.{ts,js}"]
