@@ -1,5 +1,5 @@
 import { Session } from "express-session";
-import { User } from "../entities/user.entity";
+import { User } from "../entity/user.entity";
 import { currentUserFetcher } from "../utils/currentUserFetcher";
 
 
