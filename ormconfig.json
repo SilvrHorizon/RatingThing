@@ -4,12 +4,12 @@
         "name": "default",
         "type": "sqlite",
         "database": "./database.sqlite",
-        "entities": ["./dist/entities/**/*.entity.js"],
+        "entities": ["./dist/entity/**/*.entity.js"],
         "logging": true,
         "migrations": ["./dist/migrations/*.js"],
         "cli": {
              "migrationsDir": "./src/migrations",
-             "entitiesDir": "./src/entities",
+             "entitiesDir": "./src/entity",
              "migrations": "./src/migrations"
         }
     },
@@ -17,12 +17,12 @@
         "name": "ts",
         "type": "sqlite",
         "database": "./database.sqlite",
-        "entities": ["./src/entities/**/*.entity.ts"],
+        "entities": ["./src/entity/**/*.entity.ts"],
         "logging": true,
         "migrations": ["./src/migrations/*.ts"],
         "cli":{
             "migrationsDir": "./src/migrations",
-            "entitiesDir": "./src/entities"
+            "entitiesDir": "./src/entity"
         }
     }
 ]
