@@ -3,8 +3,7 @@ import { ApolloServer } from 'apollo-server-express'
 import { buildSchema, Query, Resolver } from "type-graphql";
 import { createConnection } from "typeorm";
 import { User } from "./entities/user.entity";
-import sqlite3 from "sqlite3"
-import sqliteStoreFactory from 'express-session-sqlite'
+// import sqliteStoreFactory from 'express-session-sqlite'
 import session from "express-session";
 import { currentUserFetcher } from "./utils/currentUserFetcher";
 
@@ -18,7 +17,6 @@ const main = async () => {
         resolvers: [__dirname + "/**/*.resolver.{ts,js}"]
     });
 
-    const SqliteStore = sqliteStoreFactory(session)
 
     const apolloServer = new ApolloServer(
         { 
