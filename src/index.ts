@@ -2,8 +2,6 @@ import express from "express";
 import { ApolloServer } from 'apollo-server-express'
 import { buildSchema, Query, Resolver } from "type-graphql";
 import { createConnection } from "typeorm";
-import { User } from "./entities/user.entity";
-// import sqliteStoreFactory from 'express-session-sqlite'
 import session from "express-session";
 import { currentUserFetcher } from "./utils/currentUserFetcher";
 
