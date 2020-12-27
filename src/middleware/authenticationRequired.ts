@@ -1,7 +1,7 @@
 import { AuthenticationError,  } from "apollo-server-express";
 import { MiddlewareFn, NextFn, UnauthorizedError } from "type-graphql";
 import { myContext } from "../@types/myContext";
-import { User } from "../entities/user.entity";
+import { User } from "../entity/user.entity";
 
 export const authenticationRequired: MiddlewareFn<any> = async( resolverData, next) => { 
     const context = resolverData.context as myContext
