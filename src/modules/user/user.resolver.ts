@@ -1,6 +1,6 @@
 import { Arg, Ctx, Mutation, Query, Resolver, UseMiddleware } from "type-graphql";
 import { myContext } from "../../@types/myContext";
-import { User } from "../../entities/user.entity";
+import { User } from "../../entity/user.entity";
 import { RegisterUserResponse } from "./responses";
 
 import { adminsOnly, authenticationRequired } from "../../middleware/authenticationRequired"
